@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
           <Navbar />
-        <div className="flex bg-[#1e1e1e] overflow-x-hidden">
+        <div className="flex bg-[#1e1e1e] ">
   <aside className="">
    
               <Sidebar />
@@ -40,7 +40,8 @@ export default function RootLayout({
     <Explorer />
   </aside>
    
-  <main className="p-8 text-[#e1e4e8] font-['JetBrains_Mono',monospace] flex-1 h-[85vh] overflow-y-auto scroll-smooth overflow-x-hidden flex items-center content-area sm:p-4">
+  <main className="p-8 text-[#e1e4e8] font-['JetBrains_Mono',monospace] flex-1 h-[85vh]  scroll-smooth overflow-x-hidden flex items-center content-area sm:p-4">
+    
     {children}
   </main>
 </div>
