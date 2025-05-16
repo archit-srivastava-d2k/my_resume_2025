@@ -30,7 +30,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="bg-[#1e1e1e] flex flex-col justify-between w-[4.5vw] min-w-[40px] h-[calc(100vh-30px)] 2xl:w-[2.5vw] lg:w-[4vw] md:w-[8vw] sm:w-[10vw] fixed top-[30px]">
+    <aside className="bg-[#1e1e1e] border border-[#3f3f3f] flex flex-col justify-between w-[4.5vw] min-w-[40px] h-[calc(100vh-30px)] 2xl:w-[2.5vw] lg:w-[4vw] md:w-[8vw] sm:w-[10vw] fixed top-[30px]">
       <div>
         {sidebarTopItems.map(({ Icon, path }) => (
           <Link href={path} key={path}>

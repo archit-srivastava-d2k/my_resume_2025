@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Sidebar from "@/components/Sidebar";
+import Explorer from "@/components/Explorer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,13 +31,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-         <Navbar />
-        <div className="flex">
-          <Sidebar />
-          <main >
-            {children}
-          </main>
-        </div>
+          <Navbar />
+        <div className="flex bg-[#1e1e1e] overflow-x-hidden">
+  <aside className="">
+   
+              <Sidebar />
+
+    <Explorer />
+  </aside>
+   
+  <main className="p-8 text-[#e1e4e8] font-['JetBrains_Mono',monospace] flex-1 h-[85vh] overflow-y-auto scroll-smooth overflow-x-hidden flex items-center content-area sm:p-4">
+    {children}
+  </main>
+</div>
+
       </body>
     </html>
   );
